@@ -1,0 +1,30 @@
+
+
+.statusgroup {
+  margin-right: 25px;
+
+}
+
+.statusgroup .header{
+   color: white;
+
+}
+.statusgroup .header[data-group='A']{
+  background: #8e6e95;
+
+}
+
+.statusgroup .header[data-group='B']{
+  background: #39a59c;
+
+}
+
+.statusgroup .header[data-group='C']{
+  background: #344759;
+
+}
+
+.statusgroup .header[data-group='D']{
+  background: #e8741e;
+
+}

@@ -11,19 +11,27 @@ export default Route.extend({
     return tasks;
   },
 
-  model() {
-    this.set('groups', this.get('groupNames').map(
+  buildGroups() {
+    return this.get('groupNames').map(
       (n) => {
         return Ember.Object.create({
           name: n,
-          tasks: []
+          tasks: ['funn', 'yummy'].map((t) =>
+            ({
+              name: `Do ${t} thing`
+            })
+          )
         });
-      }
+      });
+  },
 
-    ));
+  model() {
+    this.set('groups',
+      this.buildGroups()
+    );
     this.set('tasks', this.buildTasks())
     return {
-      tasks:   this.get('tasks'),
+      // tasks:   this.get('tasks'),
       groups: this.get('groups')
     }
 

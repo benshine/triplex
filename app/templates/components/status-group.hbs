@@ -1,7 +1,9 @@
-<h2>Name {{group.name}}</h2>
-{{#each tasks as |t|}}
+<div class="statusgroup">
+<h2 class="header" data-group={{group.name}}>Name {{group.name}}</h2>
+{{#each group.tasks as |t|}}
   <li>
     {{log 'hi'}}
     {{t.name}}
   </li>
 {{/each}}
+</div>
