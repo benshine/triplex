@@ -1,1 +1,11 @@
-{{outlet}}
+<h1>kanban</h1>
+
+<ul>
+  {{#each model as |t|}}
+    <li>
+      {{log 'hi'}}
+    {{t.name}}
+    </li>
+  {{/each}}
+
+</ul>

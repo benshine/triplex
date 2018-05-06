@@ -8,6 +8,7 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('movies');
+  this.route('kanban');
 });
 
 export default Router;
