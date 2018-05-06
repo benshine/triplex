@@ -1,1 +1,7 @@
-{{yield}}
+<h2>Name {{group.name}}</h2>
+{{#each tasks as |t|}}
+  <li>
+    {{log 'hi'}}
+    {{t.name}}
+  </li>
+{{/each}}

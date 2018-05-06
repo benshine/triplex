@@ -1,11 +1,5 @@
 <h1>kanban</h1>
 
-<ul>
-  {{#each model as |t|}}
-    <li>
-      {{log 'hi'}}
-    {{t.name}}
-    </li>
-  {{/each}}
-
-</ul>
+{{#each model.groups as |g|}}
+  {{status-group group=g}}
+{{/each}}
