@@ -1,6 +1,13 @@
-{{#if isActive}}
-  {{input value=movie.name autofocus=true key-press="updateName"}}
-
+{{#if isEditing}}
+  <input value={{name}}
+           oninput={{action (mut movie.name) value="target.value"}}
+  >
 {{else}}
   <div class="ma2 br2">{{movie.name}}</div>
 {{/if}}
+
+<button {{action "toggleEdit"}}>
+  {{if isEditing 'done' 'edit' }}
+</button><
+
+
