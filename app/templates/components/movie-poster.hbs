@@ -1,1 +1,6 @@
-<div class="ma2 br2">{{movie.name}}</div>
+{{#if isActive}}
+  {{input value=movie.name autofocus=true key-press="updateName"}}
+
+{{else}}
+  <div class="ma2 br2">{{movie.name}}</div>
+{{/if}}
