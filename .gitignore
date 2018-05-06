@@ -22,3 +22,12 @@ testem.log
 bower.json.ember-try
 package.json.ember-try
 /.idea/inspectionProfiles/Project_Default.xml
+.idea/jsLibraryMappings.xml
+.idea/libraries/
+.idea/markdown-navigator.xml
+.idea/markdown-navigator/
+.idea/misc.xml
+.idea/modules.xml
+.idea/triplex.iml
+.idea/vcs.xml
+.idea/workspace.xml
