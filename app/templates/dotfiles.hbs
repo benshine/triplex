@@ -19,13 +19,20 @@
   <h2>use component</h2>
 
   {{#code-snippet}}
-    console.log( 'it worked'  );
+    console.log( 'it worked' );
   {{/code-snippet}}
 
   <h2>use better component</h2>
 
   {{#code-with-explanation snippetId='wow'}}
-    console.log( 'from the route template'  );
+    {{#block-slot 'explanation'}}
+      Most code needs a nice explanation.
+    {{/block-slot}}
+
+    {{#block-slot  'code'}}
+      console.log( 'from the reasfd mod route template' );
+
+    {{/block-slot}}
   {{/code-with-explanation}}
 </div>
 {{outlet}}
