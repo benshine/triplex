@@ -1,0 +1,19 @@
+{{yield}}
+
+<div class="code-with-explanation">
+  <div class="code-with-explanation__explanation">
+    {{#yield-slot 'explanation'}}
+      {{yield}}
+    {{/yield-slot}}
+  </div>
+
+  {{#code-snippet snippetId=snippetId}}
+    {{#yield-slot 'code'}}
+        {{yield}}
+    {{/yield-slot}}
+  {{/code-snippet}}
+
+</div>
+
+
+

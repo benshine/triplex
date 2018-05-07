@@ -1,25 +1,37 @@
 <h1>Everyone can customize their terminal!</h1>
 
-<div class="explanation">
+<div class="main-content">
+    {{#code-with-explanation snippetId='furs'}}
+      {{#block-slot 'explanation'}}
+         Furs are delicious.
+      {{/block-slot}}
 
-  {{#copy-button
-    clipboardTarget="#reverse-search"
-    success=(action "onSuccess")
-    error=(action "onError")
-  }}
-    Copy URL
-  {{/copy-button}}
+      {{#block-slot  'code'}}
+console.log( ' delicious furs' );
+      {{/block-slot}}
+    {{/code-with-explanation}}
+
+  {{#code-with-explanation snippetId='library'}}
+      {{#block-slot 'explanation'}}
+         I like libraries
+      {{/block-slot}}
+
+      {{#block-slot  'code'}}
+console.log( 'I like libraries' );
+      {{/block-slot}}
+    {{/code-with-explanation}}
+
+  {{#code-with-explanation snippetId='wow'}}
+      {{#block-slot 'explanation'}}
+        Most code needs a nice explanation.
+      {{/block-slot}}
+
+      {{#block-slot  'code'}}
+console.log( 'from the reasfd mod route template' );
+      {{/block-slot}}
+    {{/code-with-explanation}}
+
+
+  {{outlet}}
+
 </div>
-<div class="code-sample">
-  <pre id="reverse-search">
-    ctrl-r
-  </pre>
-
-
-  <h2>use component</h2>
-
-  {{#code-snippet}}
-    console.log( 'it worked'  );
-  {{/code-snippet}}
-</div>
-{{outlet}}
