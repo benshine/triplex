@@ -1,14 +1,13 @@
-<div class="code-snippet flex bg-light-gray ba br2 b--light-silver">
-
-  <pre class="code-snippet__code flex-grow-1 "
-       data-csid={{snippetId}}>
-{{yield}}
-  </pre>
+<div class="code-snippet flex bg-near-white br2 b--light-silver ma5">
 
   {{#copy-button
-    class="bn"
+    class="bn h2 bg-near-white br3 ba"
     clipboardTarget=(join '' (array '[data-csid=' snippetId ']'))
   }}
-    Copy
+
+  <pre class="code-snippet__code flex-grow-1 "data-csid={{snippetId}}>
+    {{yield}}
+  </pre>
+
   {{/copy-button}}
 </div>

@@ -7,11 +7,13 @@
     {{/yield-slot}}
   </div>
 
-  {{#code-snippet snippetId=snippetId}}
-    {{#yield-slot 'code'}}
-        {{yield}}
-    {{/yield-slot}}
-  {{/code-snippet}}
+  {{#copy-button class="bn bg-near-white br3 ba" clipboardTarget=(join '' (array '[data-csid=' snippetId ']')) }}
+
+  <p class="code-snippet__code flex-grow-1 code" data-csid={{snippetId}}>
+    {{#yield-slot 'code'}} {{yield}} {{/yield-slot}}
+  </p>
+
+  {{/copy-button}}
 
 </div>
 
