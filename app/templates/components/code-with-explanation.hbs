@@ -1,15 +1,15 @@
 {{yield}}
 
-<div class="code-with-explanation">
-  <div class="code-with-explanation__explanation">
+<div class="code-with-explanation w-100 mv3">
+  <div class="code-with-explanation__explanation w-100">
     {{#yield-slot 'explanation'}}
       {{yield}}
     {{/yield-slot}}
   </div>
 
-  {{#copy-button class="bn bg-near-white br3 ba" clipboardTarget=(join '' (array '[data-csid=' snippetId ']')) }}
+  {{#copy-button class="bn bg-near-white br3 mv1 ba w-100 flex" clipboardTarget=(join '' (array '[data-csid=' snippetId ']')) }}
 
-  <p class="code-snippet__code flex-grow-1 code" data-csid={{snippetId}}>
+  <p class="code-snippet__code code" data-csid={{snippetId}}>
     {{#yield-slot 'code'}} {{yield}} {{/yield-slot}}
   </p>
 
