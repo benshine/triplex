@@ -1,7 +1,7 @@
 import Component from '@ember/component';
 
 export default Component.extend({
-  tag: '',
+  tagName: '',
   actions: {
     addCard() {
       const name = window.prompt('name for taks');

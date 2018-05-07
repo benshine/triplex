@@ -9,6 +9,7 @@ const Router = EmberRouter.extend({
 Router.map(function() {
   this.route('movies');
   this.route('kanban');
+  this.route('dotfiles');
 });
 
 export default Router;

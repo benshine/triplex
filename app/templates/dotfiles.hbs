@@ -1,0 +1,19 @@
+<h1>Everyone can customize their terminal!</h1>
+
+<div class="explanation">
+
+  {{#copy-button
+    clipboardTarget="#reverse-search"
+    success=(action "onSuccess")
+    error=(action "onError")
+  }}
+    Copy URL
+  {{/copy-button}}
+</div>
+<div class="code-sample">
+  <pre id="reverse-search">
+    ctrl-r
+  </pre>
+
+</div>
+{{outlet}}
