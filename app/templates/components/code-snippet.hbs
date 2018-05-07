@@ -1,12 +1,14 @@
 <div class="code-snippet">
 
-  <pre class="code-snippet__code" data-csid="demo">
+  <pre class="code-snippet__code" data-csid={{snippetId}}>
     {{yield}}
   </pre>
 
   {{#copy-button
-    clipboardTarget=".code-snippet__code"
+    clipboardTarget=(join '' (array '[data-csid=' snippetId ']'))
   }}
     Copy
   {{/copy-button}}
+
+  <div class="">{{join '' (array 'yay' snippetId) }}</div>
 </div>
