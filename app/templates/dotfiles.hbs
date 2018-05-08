@@ -2,7 +2,7 @@
 
 <div class="main-content">
   <section class="bb bw5 b--washed-yellow">
-    <h2>Where am I?</h2>
+    <h2>File system</h2>
     {{#code-with-explanation snippetId='pwd'}}
       {{#block-slot 'explanation'}}
         <p>Print the working directory.</p>
@@ -13,23 +13,110 @@
       {{/block-slot}}
     {{/code-with-explanation}}
 
-    {{#code-with-explanation snippetId='library'}}
+    {{#code-with-explanation snippetId='cd'}}
       {{#block-slot 'explanation'}}
-        I like libraries
+        Take me home
       {{/block-slot}}
 
       {{#block-slot  'code'}}
-        console.log( 'I like libraries' );
+        cd
       {{/block-slot}}
     {{/code-with-explanation}}
 
-    {{#code-with-explanation snippetId='wow'}}
+    {{#code-with-explanation snippetId='ls'}}
       {{#block-slot 'explanation'}}
-        Most code needs a nice explanation.
+        List files in the current directory, with size and last modified date
       {{/block-slot}}
 
       {{#block-slot  'code'}}
-        console.log( 'from the reasfd mod route template' );
+        ls -lh
+      {{/block-slot}}
+    {{/code-with-explanation}}
+
+    {{#code-with-explanation snippetId='dragdrop'}}
+      {{#block-slot 'explanation'}}
+        To get a file's path onto the command line:
+        <ol>
+          <li>Find the file in the Finder.</li>
+          <li>Drag the file into the terminal.</li>
+        </ol>
+      {{/block-slot}}
+
+      {{#block-slot  'code'}}
+        (no code needed)
+      {{/block-slot}}
+    {{/code-with-explanation}}
+
+    {{#code-with-explanation snippetId='openinfinder'}}
+      {{#block-slot 'explanation'}}
+        To view the current directory in the Finder:
+      {{/block-slot}}
+
+      {{#block-slot  'code'}}
+        open .
+      {{/block-slot}}
+    {{/code-with-explanation}}
+
+    {{#code-with-explanation snippetId='doubleclick'}}
+      {{#block-slot 'explanation'}}
+        To open a file in the current directory as if you double clicked it:
+      {{/block-slot}}
+
+      {{#block-slot  'code'}}
+        open foo.txt
+      {{/block-slot}}
+    {{/code-with-explanation}}
+
+    {{#code-with-explanation snippetId='tabcomplete'}}
+      {{#block-slot 'explanation'}}
+        There's no need to type long filenames!
+        Start typing the filename then hit tab. The shell
+        will show a list of possible completions. Keep typing letters
+        until there is only one option; the shell will complete
+        the filename for you.
+      {{/block-slot}}
+
+      {{#block-slot  'code'}}
+        open foo&lt;tab&gt;
+      {{/block-slot}}
+    {{/code-with-explanation}}
+  </section>
+
+
+  <section class="bb bw5 b--washed-yellow">
+    <h2>Editing and reusing commands</h2>
+    {{#code-with-explanation snippetId='cursor-mvmt'}}
+      {{#block-slot 'explanation'}}
+        The mouse doesn't work normally in the terminal; you can't click to move the cursor within a line.
+        Here are some control keys to help with that.
+        <div class="ma2 pv2">
+          <div class="pa2">
+            <div class="fl w-20">Control-A</div>
+            <div class="fl w-80">Move cursor to beginning of line</div>
+          </div>
+          <div class="pa2">
+            <div class="fl w-20">Control-E</div>
+            <div class="fl w-80">Move cursor to end of line</div>
+          </div>
+          <div class="pa2">
+            <div class="fl w-20">Control-K</div>
+            <div class="fl w-80">Delete from cursor to end of line</div>
+          </div>
+        </div>
+      {{/block-slot}}
+    {{/code-with-explanation}}
+
+    {{#code-with-explanation snippetId='prevcmd'}}
+      {{#block-slot 'explanation'}}
+        Retyping commands is a pain. Use up arrow to reuse previous commands, and down arrow if you go back too far.
+        <div class="ma2 pv2">
+          <div class="pa2">
+            <div class="fl w-20">Up arrow</div>
+            <div class="fl w-80">
+              Replace current command with previous command, but don't execute it
+            </div>
+          </div>
+        </div>
       {{/block-slot}}
     {{/code-with-explanation}}
   </section>
