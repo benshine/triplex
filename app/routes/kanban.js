@@ -1,4 +1,6 @@
 import Route from '@ember/routing/route';
+import Object from '@ember/object';
+
 
 export default Route.extend({
 
@@ -14,7 +16,7 @@ export default Route.extend({
   buildGroups() {
     return this.get('groupNames').map(
       (n) => {
-        return Ember.Object.create({
+        return Object.create({
           name: n,
           tasks: ['funn', 'yummy'].map((t) =>
             ({

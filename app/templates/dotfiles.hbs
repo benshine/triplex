@@ -1,36 +1,38 @@
 <h1>Everyone can customize their terminal!</h1>
 
 <div class="main-content">
-    {{#code-with-explanation snippetId='furs'}}
+  <section class="bb bw5 b--washed-yellow">
+    <h2>Where am I?</h2>
+    {{#code-with-explanation snippetId='pwd'}}
       {{#block-slot 'explanation'}}
-         Furs are delicious.
+        <p>Print the working directory.</p>
       {{/block-slot}}
 
       {{#block-slot  'code'}}
-console.log( ' delicious furs' );
+        pwd
       {{/block-slot}}
     {{/code-with-explanation}}
 
-  {{#code-with-explanation snippetId='library'}}
+    {{#code-with-explanation snippetId='library'}}
       {{#block-slot 'explanation'}}
-         I like libraries
+        I like libraries
       {{/block-slot}}
 
       {{#block-slot  'code'}}
-console.log( 'I like libraries' );
+        console.log( 'I like libraries' );
       {{/block-slot}}
     {{/code-with-explanation}}
 
-  {{#code-with-explanation snippetId='wow'}}
+    {{#code-with-explanation snippetId='wow'}}
       {{#block-slot 'explanation'}}
         Most code needs a nice explanation.
       {{/block-slot}}
 
       {{#block-slot  'code'}}
-console.log( 'from the reasfd mod route template' );
+        console.log( 'from the reasfd mod route template' );
       {{/block-slot}}
     {{/code-with-explanation}}
-
+  </section>
 
   {{outlet}}
 
