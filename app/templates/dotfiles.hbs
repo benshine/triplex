@@ -33,20 +33,6 @@
       {{/block-slot}}
     {{/code-with-explanation}}
 
-    {{#code-with-explanation snippetId='dragdrop'}}
-      {{#block-slot 'explanation'}}
-        To get a file's path onto the command line:
-        <ol>
-          <li>Find the file in the Finder.</li>
-          <li>Drag the file into the terminal.</li>
-        </ol>
-      {{/block-slot}}
-
-      {{#block-slot  'code'}}
-        (no code needed)
-      {{/block-slot}}
-    {{/code-with-explanation}}
-
     {{#code-with-explanation snippetId='openinfinder'}}
       {{#block-slot 'explanation'}}
         To view the current directory in the Finder:
@@ -84,39 +70,63 @@
 
 
   <section class="bb bw5 b--washed-yellow">
-    <h2>Editing and reusing commands</h2>
-    {{#code-with-explanation snippetId='cursor-mvmt'}}
+    <h2>Repeating and reusing commands</h2>
+    {{#code-with-explanation snippetId='doublebang'}}
       {{#block-slot 'explanation'}}
-        The mouse doesn't work normally in the terminal; you can't click to move the cursor within a line.
-        Here are some control keys to help with that.
-        <div class="ma2 pv2">
-          <div class="pa2">
-            <div class="fl w-20">Control-A</div>
-            <div class="fl w-80">Move cursor to beginning of line</div>
-          </div>
-          <div class="pa2">
-            <div class="fl w-20">Control-E</div>
-            <div class="fl w-80">Move cursor to end of line</div>
-          </div>
-          <div class="pa2">
-            <div class="fl w-20">Control-K</div>
-            <div class="fl w-80">Delete from cursor to end of line</div>
-          </div>
-        </div>
+        To repeat the previous command:
+      {{/block-slot}}
+
+      {{#block-slot  'code'}}
+        !!
       {{/block-slot}}
     {{/code-with-explanation}}
 
-    {{#code-with-explanation snippetId='prevcmd'}}
+    {{#code-with-explanation snippetId='history'}}
       {{#block-slot 'explanation'}}
-        Retyping commands is a pain. Use up arrow to reuse previous commands, and down arrow if you go back too far.
-        <div class="ma2 pv2">
-          <div class="pa2">
-            <div class="fl w-20">Up arrow</div>
-            <div class="fl w-80">
-              Replace current command with previous command, but don't execute it
-            </div>
-          </div>
-        </div>
+        To list out recent commands:
+      {{/block-slot}}
+
+      {{#block-slot  'code'}}
+        history
+      {{/block-slot}}
+    {{/code-with-explanation}}
+
+    {{#code-with-explanation snippetId='echobang'}}
+      {{#block-slot 'explanation'}}
+        To see what will be executed if you redo a previous command:
+      {{/block-slot}}
+
+      {{#block-slot  'code'}}
+        echo !11
+      {{/block-slot}}
+    {{/code-with-explanation}}
+
+    {{#code-with-explanation snippetId='bangbang'}}
+      {{#block-slot 'explanation'}}
+        To repeat a previous command by number:
+      {{/block-slot}}
+
+      {{#block-slot  'code'}}
+        # Use caution!
+        !11 # this will actually execute command number 11
+      {{/block-slot}}
+    {{/code-with-explanation}}
+
+    {{#code-with-explanation snippetId='caret'}}
+      {{#block-slot 'explanation'}}
+        To repeat a previous command but change "foo" to "bar":
+
+        {{#copy-button class="bn bg-near-white br3 mv1 ba w-100 flex"
+                       clipboardTarget="#nonsense"}}
+
+          <p class="code-snippet__code code" id="nonsense">
+            echo "my favorite nonsense word is foo"
+          </p>
+        {{/copy-button}}
+      {{/block-slot}}
+
+      {{#block-slot  'code'}}
+        ^foo^bar
       {{/block-slot}}
     {{/code-with-explanation}}
   </section>
