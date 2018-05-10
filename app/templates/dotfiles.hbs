@@ -1,4 +1,6 @@
-<h1>Everyone can customize their terminal!</h1>
+<h1>Everyone can have fun in the terminal!</h1>
+
+<p class="i">Click on a grey box to copy that text to the clipboard.</p>
 
 <div class="main-content">
   <section class="bb bw5 b--washed-yellow">
@@ -15,7 +17,7 @@
 
     {{#code-with-explanation snippetId='cd'}}
       {{#block-slot 'explanation'}}
-        Take me home
+        Go to my home directory
       {{/block-slot}}
 
       {{#block-slot  'code'}}
@@ -24,6 +26,26 @@
     {{/code-with-explanation}}
 
     {{#code-with-explanation snippetId='ls'}}
+      {{#block-slot 'explanation'}}
+        List the files in this directory.
+      {{/block-slot}}
+
+      {{#block-slot  'code'}}
+        ls
+      {{/block-slot}}
+    {{/code-with-explanation}}
+
+    {{#code-with-explanation snippetId='cdpath'}}
+      {{#block-slot 'explanation'}}
+        Go to directory by path
+      {{/block-slot}}
+
+      {{#block-slot  'code'}}
+        cd Downloads/triplex-master/public/
+      {{/block-slot}}
+    {{/code-with-explanation}}
+
+    {{#code-with-explanation snippetId='lsh'}}
       {{#block-slot 'explanation'}}
         List files in the current directory, with size and last modified date
       {{/block-slot}}
@@ -49,7 +71,7 @@
       {{/block-slot}}
 
       {{#block-slot  'code'}}
-        open foo.txt
+        open babyarya.png
       {{/block-slot}}
     {{/code-with-explanation}}
 
@@ -63,11 +85,11 @@
       {{/block-slot}}
 
       {{#block-slot  'code'}}
-        open foo&lt;tab&gt;
+        open bow
       {{/block-slot}}
     {{/code-with-explanation}}
+    <p>Now hit the tab key, then press return. Hi, Sam! </p>
   </section>
-
 
   <section class="bb bw5 b--washed-yellow">
     <h2>Repeating and reusing commands</h2>
