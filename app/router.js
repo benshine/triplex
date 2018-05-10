@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('movies');
   this.route('kanban');
   this.route('dotfiles');
+  this.route('links');
 });
 
 export default Router;
