@@ -1,36 +1,135 @@
 <h1>Everyone can customize their terminal!</h1>
 
 <div class="main-content">
-    {{#code-with-explanation snippetId='furs'}}
+  <section class="bb bw5 b--washed-yellow">
+    <h2>File system</h2>
+    {{#code-with-explanation snippetId='pwd'}}
       {{#block-slot 'explanation'}}
-         Furs are delicious.
+        <p>Print the working directory.</p>
       {{/block-slot}}
 
       {{#block-slot  'code'}}
-console.log( ' delicious furs' );
+        pwd
       {{/block-slot}}
     {{/code-with-explanation}}
 
-  {{#code-with-explanation snippetId='library'}}
+    {{#code-with-explanation snippetId='cd'}}
       {{#block-slot 'explanation'}}
-         I like libraries
+        Take me home
       {{/block-slot}}
 
       {{#block-slot  'code'}}
-console.log( 'I like libraries' );
+        cd
       {{/block-slot}}
     {{/code-with-explanation}}
 
-  {{#code-with-explanation snippetId='wow'}}
+    {{#code-with-explanation snippetId='ls'}}
       {{#block-slot 'explanation'}}
-        Most code needs a nice explanation.
+        List files in the current directory, with size and last modified date
       {{/block-slot}}
 
       {{#block-slot  'code'}}
-console.log( 'from the reasfd mod route template' );
+        ls -lh
       {{/block-slot}}
     {{/code-with-explanation}}
 
+    {{#code-with-explanation snippetId='openinfinder'}}
+      {{#block-slot 'explanation'}}
+        To view the current directory in the Finder:
+      {{/block-slot}}
+
+      {{#block-slot  'code'}}
+        open .
+      {{/block-slot}}
+    {{/code-with-explanation}}
+
+    {{#code-with-explanation snippetId='doubleclick'}}
+      {{#block-slot 'explanation'}}
+        To open a file in the current directory as if you double clicked it:
+      {{/block-slot}}
+
+      {{#block-slot  'code'}}
+        open foo.txt
+      {{/block-slot}}
+    {{/code-with-explanation}}
+
+    {{#code-with-explanation snippetId='tabcomplete'}}
+      {{#block-slot 'explanation'}}
+        There's no need to type long filenames!
+        Start typing the filename then hit tab. The shell
+        will show a list of possible completions. Keep typing letters
+        until there is only one option; the shell will complete
+        the filename for you.
+      {{/block-slot}}
+
+      {{#block-slot  'code'}}
+        open foo&lt;tab&gt;
+      {{/block-slot}}
+    {{/code-with-explanation}}
+  </section>
+
+
+  <section class="bb bw5 b--washed-yellow">
+    <h2>Repeating and reusing commands</h2>
+    {{#code-with-explanation snippetId='doublebang'}}
+      {{#block-slot 'explanation'}}
+        To repeat the previous command:
+      {{/block-slot}}
+
+      {{#block-slot  'code'}}
+        !!
+      {{/block-slot}}
+    {{/code-with-explanation}}
+
+    {{#code-with-explanation snippetId='history'}}
+      {{#block-slot 'explanation'}}
+        To list out recent commands:
+      {{/block-slot}}
+
+      {{#block-slot  'code'}}
+        history
+      {{/block-slot}}
+    {{/code-with-explanation}}
+
+    {{#code-with-explanation snippetId='echobang'}}
+      {{#block-slot 'explanation'}}
+        To see what will be executed if you redo a previous command:
+      {{/block-slot}}
+
+      {{#block-slot  'code'}}
+        echo !11
+      {{/block-slot}}
+    {{/code-with-explanation}}
+
+    {{#code-with-explanation snippetId='bangbang'}}
+      {{#block-slot 'explanation'}}
+        To repeat a previous command by number:
+      {{/block-slot}}
+
+      {{#block-slot  'code'}}
+        # Use caution!
+        !11 # this will actually execute command number 11
+      {{/block-slot}}
+    {{/code-with-explanation}}
+
+    {{#code-with-explanation snippetId='caret'}}
+      {{#block-slot 'explanation'}}
+        To repeat a previous command but change "foo" to "bar":
+
+        {{#copy-button class="bn bg-near-white br3 mv1 ba w-100 flex"
+                       clipboardTarget="#nonsense"}}
+
+          <p class="code-snippet__code code" id="nonsense">
+            echo "my favorite nonsense word is foo"
+          </p>
+        {{/copy-button}}
+      {{/block-slot}}
+
+      {{#block-slot  'code'}}
+        ^foo^bar
+      {{/block-slot}}
+    {{/code-with-explanation}}
+  </section>
 
   {{outlet}}
 

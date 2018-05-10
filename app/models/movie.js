@@ -1,5 +1,5 @@
-import Ember from 'ember';
+import Object from '@ember/object';
 
-export default Ember.Object.extend({
+export default Object.extend({
   name: 'Unnamed Movie'
 });
