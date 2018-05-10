@@ -167,7 +167,7 @@
     {{/code-with-explanation}}
 
 
-    {{#code-with-explanation snippetId='resetprompt'}}
+    {{#code-with-explanation snippetId='ezprompt'}}
       {{#block-slot 'explanation'}}
         To configure an interesting prompt:
       {{/block-slot}}
@@ -179,6 +179,34 @@
 
 
   </section>
+
+  <section class="bb bw5 b--washed-yellow">
+    <h2>Saving your changes</h2>
+    {{#code-with-explanation snippetId='curlstarter'}}
+      {{#block-slot 'explanation'}}
+        I've put a starter configuration at
+        <a href="http://bit.ly/startershell">http://bit.ly/starter-config</a> .
+        To save that file to your machine:
+      {{/block-slot}}
+
+      {{#block-slot  'code'}}
+        curl -L http://bit.ly/starter-config &gt; bash_profile_starter
+      {{/block-slot}}
+    {{/code-with-explanation}}
+
+
+    {{#code-with-explanation snippetId='applyprofile'}}
+      {{#block-slot 'explanation'}}
+        To apply the configuration in that file temporarily:
+      {{/block-slot}}
+
+      {{#block-slot  'code'}}
+        source bash_profile_starter
+      {{/block-slot}}
+    {{/code-with-explanation}}
+
+  </section>
+
 
   {{outlet}}
 
