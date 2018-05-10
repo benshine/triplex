@@ -6,6 +6,7 @@ export default Route.extend({
     for (let i = 0; i < 100; i++) {
       movies.push({name: "Movie " + i});
     }
+    console.log( 'you found the puppy!!! 🐶'  );
     return movies;
   },
 
