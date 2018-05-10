@@ -153,6 +153,33 @@
     {{/code-with-explanation}}
   </section>
 
+
+  <section class="bb bw5 b--washed-yellow">
+    <h2>Configuring the prompt</h2>
+    {{#code-with-explanation snippetId='resetprompt'}}
+      {{#block-slot 'explanation'}}
+        To reset the prompt to something basic:
+      {{/block-slot}}
+
+      {{#block-slot  'code'}}
+        export PS1="hello $ "
+      {{/block-slot}}
+    {{/code-with-explanation}}
+
+
+    {{#code-with-explanation snippetId='resetprompt'}}
+      {{#block-slot 'explanation'}}
+        To configure an interesting prompt:
+      {{/block-slot}}
+
+      {{#block-slot  'code'}}
+        open http://ezprompt.net
+      {{/block-slot}}
+    {{/code-with-explanation}}
+
+
+  </section>
+
   {{outlet}}
 
 </div>
